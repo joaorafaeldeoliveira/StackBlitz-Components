@@ -1,0 +1,113 @@
+:root {
+    --primary: hsl(222.2, 47.4%, 11.2%);
+    --primary-hover: hsl(222.2, 47.4%, 20%);
+    --destructive: hsl(0, 84%, 60%);
+    --destructive-hover: hsl(0, 84%, 50%);
+}
+
+
+.container {
+    width: 100%;
+    max-width: 800px;       
+    margin: 0 auto;          
+    min-height: 100vh;       
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    gap: 15px;
+    padding: 20px;        
+  }
+
+
+/* PRIMARY BUTTON*/
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.primary-button { 
+    background-color: var(--primary);
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-hover);
+  }
+
+
+  /* BUTTON OUTLINE*/
+.outline-button { 
+    border-color: hsl(240, 5%, 64%);
+    color: hsl(240, 5%, 20%);
+    background-color: white;
+}
+.outline-button:hover { 
+    background-color: hsl(240, 5%, 96%);
+}
+
+
+/* BUTTON DESTRUCTIVE*/
+
+.destructive-button {
+    background-color: var(--destructive);
+    color: white;
+  }
+
+.destructive-button:hover {
+    background-color: var(--destructive-hover);
+}
+
+
+/* ICON BUTTON*/
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* ANIMATION BUTTON*/
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.loading {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.button.active {
+    background-color: hsl(222, 80%, 50%);
+    color: white;
+}
