@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="/src/components/button/button.css">
+</head>
+<body>
+    <nav class="navegacao">
+        <a href="/" aria-current="page">Home</a>
+    </nav>
+    <div class="container">
+        <button id="openModal" class="button primary-button">Abrir modal</button>
+
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <h2>Título do Modal</h2>
+              <p>Conteúdo do modal aqui!</p>
+              <button id="closeModal" class="button outline-button">Fechar</button>
+            </div>
+        </div>
+
+        <button id="openConfirm" class="button destructive-button">Excluir item</button>
+
+        <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h2>Tem certeza?</h2>
+            <p>Essa ação não poderá ser desfeita.</p>
+            <div class="modal-content2" >
+                <button id="cancelConfirm" class="button outline-button">Cancelar</button>
+                <button id="confirmDelete" class="button destructive-button">Excluir</button>
+            </div>
+        </div>
+        </div>
+          
+
+    </div>
+    
+
+
+
+    <script src="modal.js"></script>
+</body>
+</html>
