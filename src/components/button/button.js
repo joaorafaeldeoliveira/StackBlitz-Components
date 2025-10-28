@@ -6,6 +6,7 @@ button.addEventListener('click', () => {
   button.textContent = button.classList.contains('active') ? 'Desativar' : 'Ativar';
 });
 
+
 const loadButton = document.getElementById('loadButton');
   loadButton.addEventListener('click', () => {
     loadButton.disabled = true;
@@ -13,6 +14,6 @@ const loadButton = document.getElementById('loadButton');
 
     setTimeout(() => {
         loadButton.disabled = false;
-        loadButton.innerHTML = 'Concluído ✅';
+        loadButton.innerHTML = 'Concluído';
     }, 2000);
 });
