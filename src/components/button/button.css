@@ -134,3 +134,12 @@ nav a {
   text-decoration: none;
   color: #555;
 }
+
+.ghost-button {
+  background: transparent;
+  color: hsl(240, 5%, 20%);
+}
+
+.ghost-button :hover {
+  background-color: hsl(240, 5%, 96%);
+}

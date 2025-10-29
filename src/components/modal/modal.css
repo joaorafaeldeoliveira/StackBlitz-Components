@@ -95,3 +95,20 @@ nav {
   border-radius: 1px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 } 
+
+.dark {
+  --bg: #0f172a;
+  --text-color: #e2e8f0;
+  --text-muted: #94a3b8;
+}
+.dark .modal-content {
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+.dark-mode { 
+  color: var(--text-color)
+}
+.dark-local { 
+  color: var(--text-muted)
+}

@@ -40,18 +40,29 @@
         <button id="openForm" class="button primary-button">Modal Formulario</button>
 
         <div id="formModal" class="modal">
-        <div class="modal-content">
-            <h2>Cadastrar usuário</h2>
-            <form id="userForm">
-            <input type="text"  placeholder="Nome"   required   class="formInput">
-            <input type="email" placeholder="Email"  required   class="formInput">
-            <div class="formButton" >
-                <button type="button" id="cancelForm" class="button outline-button">Cancelar</button>
-                <button type="submit" class="button primary-button">Salvar</button>
+            <div class="modal-content">
+                <h2>Cadastrar usuário</h2>
+                <form id="userForm">
+                <input type="text"  placeholder="Nome"   required   class="formInput">
+                <input type="email" placeholder="Email"  required   class="formInput">
+                <div class="formButton" >
+                    <button type="button" id="cancelForm" class="button outline-button">Cancelar</button>
+                    <button type="submit" class="button primary-button">Salvar</button>
+                </div>
+                </form>
             </div>
-            </form>
+        </div>
+
+        <button id="openDarkModal" class="button ghost-button">Abrir modal escuro</button>
+
+        <div id="darkModal" class="modal dark">
+        <div class="modal-content">
+            <h2 class="dark-mode">Modo Escuro</h2>
+            <p class="dark-local">Este é um modal com tema dark.</p>
+            <button id="closeDark" class="button outline-button">Fechar</button>
         </div>
         </div>
+
 
     </div>
     

@@ -35,3 +35,10 @@ userForm.addEventListener('submit', e => {
 formModal.addEventListener('click', e => {
   if (e.target === formModal) formModal.classList.remove('show');
 });
+
+const darkModal = document.getElementById('darkModal');
+document.getElementById('openDarkModal').onclick = () => darkModal.classList.add('show');
+document.getElementById('closeDark').onclick = () => darkModal.classList.remove('show');
+darkModal.addEventListener("click",e => { 
+  if(e.target === darkModal) darkModal.classList.remove('show');
+});
