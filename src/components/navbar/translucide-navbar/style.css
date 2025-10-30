@@ -1,0 +1,97 @@
+:root {
+    --color-bg: #ffffff;
+    --color-text: hsl(240, 5%, 15%);
+    --color-text-light: hsl(240, 5%, 40%);
+    --color-primary: hsl(222, 47%, 45%);
+    --color-border: hsl(240, 5%, 90%);
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --transition: 0.25s ease;
+    --blur-bg: rgba(255, 255, 255, 0.2);
+  }
+  
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+  .glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 90%;
+    max-width: 1200px; 
+    margin: 20px auto; 
+  
+  
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+  
+    background: var(--blur-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 30px var(--color-shadow);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  .glass-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .glass-nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+  
+  .glass-nav-links a:hover {
+    color: var(--color-primary);
+  }
+  
+  
+  .nav-cta {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform var(--transition), background var(--transition);
+  }
+  
+  .nav-cta:hover {
+    transform: scale(1.05);
+    background-color: hsl(222, 47%, 40%);
+  }
+  
+  .translucide-body {
+    min-height: 200vh;
+    background: linear-gradient(to bottom, #e2e8f0, #94a3b8);
+  }
+  
