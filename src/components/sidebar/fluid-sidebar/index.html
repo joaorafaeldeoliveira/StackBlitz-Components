@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Animada</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando a fonte Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Overlay para fechar a sidebar ao clicar fora -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <div class="sidebar" id="animatedSidebar">
+        <div class="sidebar-header">
+          <h2>Menu</h2>
+          <button id="closeSidebar">×</button>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="/index.html">Home</a>
+          <a href="/src/components/sidebar/sidebar.html">Sidebars</a>
+          <a href="#">Produtos</a>
+          <a href="#">Configurações</a>
+          <a href="#">Sair</a>
+        </nav>
+        <div class="sidebar-footer">
+          <p>&copy; 2024 Sua Empresa</p>
+        </div>
+    </div>
+
+    <main id="content">
+        <button id="openSidebar" class="menu-btn">☰</button>
+        <h1>Bem-vindo!</h1>
+        <p>Conteúdo principal aqui...</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
