@@ -1,0 +1,143 @@
+/* 1. VARIÁVEIS GLOBAIS (inspiradas no shadcn/ui)
+  Coloque isso no topo do seu CSS ou em :root
+*/
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Cores (em modo claro, sinta-se à vontade para adicionar um modo escuro) */
+  --background: hsl(0, 0%, 100%);     /* Cor de fundo do menu */
+  --foreground: hsl(0, 0%, 3.9%);     /* Cor do texto principal */
+  --muted-foreground: hsl(0, 0%, 45.1%); /* Cor do texto sutil (para atalhos) */
+  
+  --border: hsl(0, 0%, 89.8%);      /* Cor da borda */
+  --input: hsl(0, 0%, 89.8%);        /* Cor da borda do botão */
+  
+  --accent: hsl(0, 0%, 96.1%);       /* Cor de hover do item */
+  --accent-foreground: hsl(0, 0%, 3.9%); /* Cor do texto no hover */
+
+  --danger: hsl(0, 84.2%, 60.2%);    /* Cor para itens destrutivos (Sair) */
+  --danger-foreground: hsl(0, 0%, 98%); /* Cor do texto do item destrutivo */
+
+  /* Raio da borda */
+  --radius: 0.5rem;
+  --radius-sm: 0.3rem;
+}
+
+/* 2. ESTILOS DO DROPDOWN
+*/
+body {
+  font-family: var(--font-sans);
+  background-color: #f9f9f9; /* Um fundo leve para o exemplo */
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+}
+
+/* O contêiner principal */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* O botão que abre o menu */
+.dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--input);
+  background-color: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.dropdown__trigger:hover {
+  background-color: var(--accent);
+}
+
+.dropdown__trigger svg {
+  transition: transform 0.2s ease;
+}
+
+.dropdown__trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 0.25rem); 
+  left: 0;
+  z-index: 50;
+  
+  min-width: 12rem; 
+  padding: 0.25rem; 
+  
+  background-color: var(--background);
+  color: var(--foreground);
+  
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  
+  opacity: 0;
+  transform: scale(0.95) translateY(-10px);
+  pointer-events: none; 
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.dropdown__menu.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto; 
+}
+
+
+.dropdown__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem; 
+  font-size: 0.875rem;
+  
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.dropdown__item a { 
+  text-decoration: none;
+  font-size: 0.8125rem;
+  color: var(--foreground);
+}
+
+.dropdown__item:hover,
+.dropdown__item:focus {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  outline: none;
+}
+
+.dropdown__shortcut {
+  margin-left: 2rem; 
+  font-size: 0.8125rem; 
+  color: var(--muted-foreground);
+}
+
+.dropdown__item--danger:hover,
+.dropdown__item--danger:focus {
+  background-color: var(--danger);
+  color: var(--danger-foreground);
+}
+
+.dropdown__separator {
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.25rem -0.25rem;
+}
